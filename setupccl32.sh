@@ -1,5 +1,5 @@
 #!/bin/bash
-# Sets up CCL on 674-bit computers after running aptget-x8664.sh
+# Sets up CCL on 32-bit computers after running aptget-x8632.sh
 # Run this from sudo or as root
 
 cclscript="/usr/local/bin/ccl"    # /   (root directory)
@@ -8,7 +8,7 @@ if ! [ -e "$cclscript" ]
 then
 cat << EOF > $cclscript
 #!/bin/bash
-/usr/local/src/ccl/lx86cl64 \$*
+/usr/local/src/ccl/lx86cl $*
 EOF
 fi
 chmod 755 $cclscript
