@@ -11,8 +11,11 @@ cat << EOF > $cclscript
 /usr/local/src/ccl/lx86cl64 \$*
 EOF
 fi
+# following needs root
 chmod 755 $cclscript
 
-ccl -l "quicklisp.lisp" -e '(quicklisp-quickstart:install)' -e '(ql:add-to-init-file)' -e '(quit)'
 
+ccl -l "~/quicklisp.lisp" -e '(quicklisp-quickstart:install)' -e '(ql:add-to-init-file)' -e '(quit)'
+
+# following needs root
 ccl -e '(test-ccl)'
