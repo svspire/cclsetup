@@ -17,6 +17,9 @@ cd
 wget http://beta.quicklisp.org/quicklisp.lisp
 
 cd /usr/local/src/
-git clone https://github.com/Clozure/ccl/releases/download/v1.11.5/ccl-1.11.5-linuxx86.tar.gz
+wget https://github.com/Clozure/ccl/releases/download/v1.11.5/ccl-1.11.5-linuxx86.tar.gz
+tar xvf ccl-1.11.5-linuxx86.tar.gz
+
+# git clone https://github.com/Clozure/ccl/releases/download/v1.11.5/ccl-1.11.5-linuxx86.tar.gz
 
 # now run setupccl64.sh or setupccl32.sh
