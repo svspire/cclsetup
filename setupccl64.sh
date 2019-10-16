@@ -14,8 +14,11 @@ fi
 # following needs root
 chmod 755 $cclscript
 
-
+if ! [ -e "${HOME}/quicklisp/setup.lisp" ]
+then
+echo ${HOME}
 ccl -l "~/quicklisp.lisp" -e '(quicklisp-quickstart:install)' -e '(ql:add-to-init-file)' -e '(quit)'
+fi
 
 # following needs root
 ccl -e '(test-ccl)'
