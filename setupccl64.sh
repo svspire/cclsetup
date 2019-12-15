@@ -20,5 +20,5 @@ echo ${HOME}
 ccl -l "~/quicklisp.lisp" -e '(quicklisp-quickstart:install)' -e '(ql:add-to-init-file)' -e '(quit)'
 fi
 
-# following needs root
-ccl -e '(test-ccl)'
+# following no longer works without SVN
+# ccl -e '(test-ccl)'
