@@ -11,7 +11,7 @@ cat << EOF > $cclscript
 /Applications/ccl/dx86cl64 \$*
 EOF
 fi
-# following needs root
+# following may need root
 chmod 755 $cclscript
 
 if ! [ -e "${HOME}/quicklisp/setup.lisp" ]
@@ -20,5 +20,5 @@ echo ${HOME}
 ccl -n -l "~/quicklisp.lisp" -e '(quicklisp-quickstart:install)' -e '(ql:add-to-init-file)' -e '(quit)'
 fi
 
-# following needs root
+# following may need root
 ccl -n -e '(test-ccl)'
