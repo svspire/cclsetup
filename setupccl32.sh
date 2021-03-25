@@ -13,6 +13,6 @@ EOF
 fi
 chmod 755 $cclscript
 
-ccl -l "quicklisp.lisp" -e '(quicklisp-quickstart:install)' -e '(ql:add-to-init-file)' -e '(quit)'
+ccl -n -l "quicklisp.lisp" -e '(quicklisp-quickstart:install)' -e '(ql:add-to-init-file)' -e '(quit)'
 
-ccl -e '(test-ccl)'
+ccl -n -e '(test-ccl)'

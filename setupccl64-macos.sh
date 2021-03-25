@@ -1,5 +1,5 @@
 #!/bin/bash
-# Sets up CCL on 64-bit computers after running aptget-x86.sh
+# Sets up CCL on MacOS after installing ccl in /Applications
 # Run this from sudo or as root
 
 cclscript="/usr/local/bin/ccl"    # /   (root directory)
@@ -8,7 +8,7 @@ if ! [ -e "$cclscript" ]
 then
 cat << EOF > $cclscript
 #!/bin/bash
-/usr/local/src/ccl/lx86cl64 \$*
+/Applications/ccl/dx86cl64 \$*
 EOF
 fi
 # following needs root
