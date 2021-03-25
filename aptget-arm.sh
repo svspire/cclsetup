@@ -13,8 +13,19 @@ apt-get install -y rlwrap
 apt-get install -y host
 apt-get install -y locate
 
-wget http://beta.quicklisp.org/quicklisp.lisp
+if [ ! -f "${HOME}/quicklisp.lisp" ]; then
+  cd
+  wget http://beta.quicklisp.org/quicklisp.lisp
+fi
 
-cd /usr/local/src/
-svn co http://svn.clozure.com/publicsvn/openmcl/trunk/linuxarm/ccl
+if [ ! -d "/usr/local/src/ccl" ]; then
+  mkdir /usr/local/src/ccl
+  cd /usr/local/src/ccl
+  wget https://github.com/Clozure/ccl/releases/download/v1.12-dev.5/linuxarm.tar.gz
+  tar xvf linuxarm.tar.gz
+fi
+
+# git clone https://github.com/Clozure/ccl/releases/download/v1.11.5/ccl-1.11.5-linuxarm.tar.gz
+
+# now run setupccl64.sh or setupccl32.sh
 
